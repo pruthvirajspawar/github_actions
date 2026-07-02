@@ -27,12 +27,12 @@ jobs:
 
       - name: tf.init
         run: terraform init
-        working-directory: ./.github/workflows
+        working-directory: ./Environment/Dev
 
       - name: tf.plan
         run: terraform plan -out=tfplan
-        working-directory: ./.github/workflows
+        working-directory: ./Environment/Dev
 
       - name: tf.apply
         run: terraform apply -auto-approve tfplan
-        working-directory: ./.github/workflows
+        working-directory: ./Environment/Dev
